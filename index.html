@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Shreeyans Raj's personal NEXUS portfolio. Physics, mathematics, computational experiments, and creative frontend engineering.">
+    <meta name="theme-color" content="#030712">
+    <title>Shreeyans Raj | NEXUS Core</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="custom-cursor" aria-hidden="true"></div>
+
+    <div id="boot-sequence" aria-hidden="true">
+        <div class="boot-terminal">
+            <p id="boot-text"></p><span class="boot-cursor">_</span>
+        </div>
+        <div class="boot-progress-bar" aria-hidden="true">
+            <div class="boot-progress"></div>
+        </div>
+        <button id="boot-skip" type="button" class="boot-skip">SKIP BOOT</button>
+    </div>
+
+    <canvas id="hud-canvas" aria-hidden="true"></canvas>
+    <div class="scanlines" aria-hidden="true"></div>
+    <div class="vignette" aria-hidden="true"></div>
+
+    <aside id="live-terminal-sidebar" class="hidden-mobile" aria-hidden="true">
+        <div class="term-header">SYS.LOGS</div>
+        <ul id="term-logs"></ul>
+    </aside>
+
+    <nav id="navbar" aria-label="Primary navigation">
+        <a class="nav-logo" href="#hero" aria-label="NEXUS Core home">
+            SYS.CORE // <span class="glow-text">SHREEYANS</span>
+        </a>
+
+        <div class="nav-actions">
+            <div class="perf-toggle-container">
+                <button id="perf-toggle" type="button" class="sound-click" aria-pressed="false">
+                    MODE: <span class="glow-text">MAX</span>
+                </button>
+            </div>
+
+            <button class="mobile-menu-btn sound-hover" id="mobile-menu-btn"
+                    type="button" aria-label="Open navigation menu" aria-controls="nav-links" aria-expanded="false">
+                <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+            </button>
+        </div>
+
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#hero" class="active sound-hover">00. INIT</a></li>
+            <li><a href="#about" class="sound-hover">01. PROFILE</a></li>
+            <li><a href="#projects" class="sound-hover">02. LABS</a></li>
+            <li><a href="#contact" class="sound-hover">03. COMM</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="hero" class="section hero-section">
+            <div class="hero-content">
+                <div class="hud-data-left" aria-hidden="true">
+                    <p>SYS.LOC: KOTA, RAJASTHAN</p>
+                    <p>PHYSICS: STUDY_MODE</p>
+                    <p>CHEM_MATH: ACTIVE</p>
+                </div>
+
+                <div class="hero-center hover-tilt">
+                    <p class="eyebrow">PERSONAL RESEARCH INTERFACE // 2026</p>
+                    <h1 class="glitch" data-text="SHREEYANS RAJ">SHREEYANS RAJ</h1>
+
+                    <div class="subtitle-container" aria-live="polite">
+                        <span class="static-text">&gt;_ </span>
+                        <span id="typed-text" class="glow-text"></span><span class="cursor">_</span>
+                    </div>
+
+                    <p class="hero-subtext">
+                        A student exploring physics, mathematics, computation, and futuristic interfaces.
+                        This is a personal digital lab, not a résumé.
+                    </p>
+
+                    <div id="three-reactor" class="sound-click" role="button" tabindex="0"
+                         aria-label="Interactive NEXUS reactor"></div>
+
+                    <div class="cta-group">
+                        <a href="#about" class="btn primary-btn sound-hover sound-click">ACCESS PROFILE</a>
+                        <a href="#projects" class="btn secondary-btn sound-hover sound-click">VIEW LABS</a>
+                    </div>
+                </div>
+
+                <div class="hud-data-right" aria-hidden="true">
+                    <p>JEE.ADVANCED: TARGET_LOCKED</p>
+                    <p>CURIOSITY: UNBOUNDED</p>
+                    <p>SYS.VER: 12.0.0</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section unlock-module">
+            <div class="module-status">[ ENCRYPTED_MODULE ]</div>
+            <h2 class="section-title">01 // SUBJECT <span class="glow-text">IDENTIFICATION</span></h2>
+
+            <div class="about-grid module-content">
+                <article class="glass-card hover-tilt p-card">
+                    <div class="card-header">
+                        <div class="dot red"></div><div class="dot yellow"></div><div class="dot green"></div>
+                        <span>PROFILE_DATA.sys</span>
+                    </div>
+                    <div class="card-body">
+                        <p class="lead-text">
+                            I am driven by a relentless need to understand how things work.
+                            My core interests are physics, mathematics, chemistry, programming, and interactive technology.
+                        </p>
+                        <p>
+                            I do not just solve equations on paper. I like turning ideas into experiments,
+                            simulations, visualizations, and interfaces with JavaScript, Canvas, and WebGL.
+                        </p>
+                        <p>
+                            Outside the terminal, I recharge with Christopher Nolan films, SRK classics,
+                            and a serious plate of chicken biryani.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="glass-card hover-tilt p-card">
+                    <div class="card-header gold-header">
+                        <span>CURRENT_PROCESSES.log</span>
+                    </div>
+                    <div class="learning-list">
+                        <div class="learning-item"><span class="glow-text">01.</span> Physics, Chemistry & Mathematics</div>
+                        <div class="learning-item"><span class="glow-text">02.</span> Computational Physics (JS / WebGL)</div>
+                        <div class="learning-item"><span class="glow-text">03.</span> Algorithmic Logic & Data Processing</div>
+                        <div class="learning-item"><span class="glow-text">04.</span> Frontend Interaction & UI Systems</div>
+                        <div class="learning-item"><span class="glow-text">05.</span> Focus, Discipline & Long-Term Learning</div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="projects" class="section unlock-module">
+            <div class="module-status">[ ENCRYPTED_MODULE ]</div>
+            <h2 class="section-title">02 // COMPUTATIONAL <span class="glow-text">LABS</span></h2>
+
+            <div class="projects-grid module-content">
+                <article class="glass-card project-card hover-tilt">
+                    <div class="project-img-placeholder">
+                        <div class="wireframe-grid"></div>
+                        <span class="img-label">PHYSICS_VISUALIZATION</span>
+                    </div>
+                    <div class="project-info">
+                        <h3>Advanced Kinematic Physics Engine</h3>
+                        <p>
+                            An interactive computational lab for visualizing projectile and particle dynamics,
+                            using numerical integration and real-time rendering in the browser.
+                        </p>
+                        <div class="tags">
+                            <span>Three.js</span><span>Euler Integration</span><span>Physics</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://shreeyansraj463-hue.github.io/3D-Particle-Playground/"
+                               target="_blank" rel="noopener noreferrer"
+                               class="btn primary-btn small-btn sound-hover">DEPLOYMENT</a>
+                            <a href="https://github.com/shreeyansraj463-hue/3D-Particle-Playground"
+                               target="_blank" rel="noopener noreferrer"
+                               class="btn secondary-btn small-btn sound-hover">SOURCE</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="glass-card project-card hover-tilt">
+                    <div class="project-img-placeholder">
+                        <div class="wireframe-grid"></div>
+                        <span class="img-label">CHEMISTRY_LAB</span>
+                    </div>
+                    <div class="project-info">
+                        <h3>Camlab</h3>
+                        <p>
+                            A frontend experiment focused on interactive UI, animation, DOM-driven behavior,
+                            responsive composition, and a futuristic visual system.
+                        </p>
+                        <div class="tags">
+                            <span>JavaScript</span><span>DOM API</span><span>Responsive UI</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://shreeyansraj463-hue.github.io/camlab/"
+                               target="_blank" rel="noopener noreferrer"
+                               class="btn primary-btn small-btn sound-hover">DEPLOYMENT</a>
+                            <a href="https://github.com/shreeyansraj463-hue/camlab"
+                               target="_blank" rel="noopener noreferrer"
+                               class="btn secondary-btn small-btn sound-hover">SOURCE</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="contact" class="section unlock-module">
+            <div class="module-status">[ ENCRYPTED_MODULE ]</div>
+            <h2 class="section-title">03 // SECURE <span class="glow-text">COMMUNICATION</span></h2>
+
+            <div class="contact-wrapper module-content">
+                <form class="glass-card contact-form hover-tilt" id="comms-form">
+                    <div class="form-group">
+                        <label for="name">ID_NAME</label>
+                        <input type="text" id="name" name="name" autocomplete="name"
+                               required maxlength="80" placeholder="Enter your name...">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">UPLINK_EMAIL</label>
+                        <input type="email" id="email" name="email" autocomplete="email"
+                               required maxlength="160" placeholder="Enter your email...">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">DATA_PAYLOAD</label>
+                        <textarea id="message" name="message" rows="5" maxlength="2000" required
+                                  placeholder="Hey, I like the computational engineering angle. Let's connect!"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn primary-btn w-100 sound-hover sound-click">
+                        TRANSMIT DATA
+                    </button>
+                    <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+                </form>
+
+                <aside class="contact-hubs glass-card hover-tilt">
+                    <h3>EXTERNAL HUBS</h3>
+                    <ul class="social-links">
+                        <li><a href="https://github.com/shreeyansraj463-hue" target="_blank" rel="noopener noreferrer"
+                               class="glow-text sound-hover">GITHUB_REPOSITORY</a></li>
+                        <li><a href="https://x.com/Mainhushreeyans" target="_blank" rel="noopener noreferrer"
+                               class="glow-text sound-hover">X_NETWORK</a></li>
+                        <li><a href="https://wa.me/916201957968" target="_blank" rel="noopener noreferrer"
+                               class="glow-text sound-hover">WHATSAPP_LINK</a></li>
+                    </ul>
+
+                    <div class="hud-decorative">
+                        <p>&gt; SYS.STATUS: STUDYING</p>
+                        <p>&gt; VIBE: FOCUSED &amp; ANALYTICAL</p>
+                        <div class="barcode" aria-hidden="true"></div>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <button id="ai-toggle-btn" class="sound-click" type="button" aria-label="Open NEXUS assistant"
+                aria-controls="ai-terminal" aria-expanded="false">
+            <span class="ai-icon">AI</span>
+        </button>
+
+        <section id="ai-terminal" class="glass-card hidden" aria-label="NEXUS AI assistant">
+            <div class="ai-header">
+                <span class="glow-text">SYS.ASSISTANT v3.0</span>
+                <button id="ai-close-btn" type="button" aria-label="Close assistant">X</button>
+            </div>
+
+            <div class="ai-chat-window" id="ai-chat-window" aria-live="polite">
+                <div class="ai-message system-msg">
+                    <span class="ai-label">SYS:</span>
+                    <span class="ai-text">ONLINE. TERMINAL READY. SELECT A PROTOCOL.</span>
+                </div>
+            </div>
+
+            <div class="ai-quick-prompts" aria-label="Assistant prompts">
+                <button type="button" class="ai-prompt-btn sound-hover sound-click" data-query="schrodinger">SCHRODINGERS_PREP.sys</button>
+                <button type="button" class="ai-prompt-btn sound-hover sound-click" data-query="grind">LATE_NIGHT_GRIND.log</button>
+                <button type="button" class="ai-prompt-btn sound-hover sound-click" data-query="bribe">DEBUG_INCENTIVE.sys</button>
+                <button type="button" class="ai-prompt-btn sound-hover sound-click" data-query="bollywood">BOLLYWOOD_PHYSICS.log</button>
+                <button type="button" class="ai-prompt-btn sound-hover sound-click" data-query="railway">RAILWAY_SURVIVAL.exe</button>
+                <button type="button" class="ai-prompt-btn sound-hover sound-click" data-query="error">SIMULATION_ERROR</button>
+                <button type="button" class="ai-prompt-btn sound-hover sound-click" data-query="physics">BREAK_PHYSICS.exe</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>ENGINEERED WITH PRECISION. FOCUSED ON THE FUTURE.</p>
+            <p class="glow-text">© 2026 SHREEYANS RAJ</p>
+        </div>
+    </footer>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
